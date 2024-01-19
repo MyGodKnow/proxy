@@ -1,5 +1,16 @@
 {
   "rewrites": [
     { "source": "/:url*", "destination": "https://www.wgzdy.top/:url*" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).(css|js|webp|jpg|png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=259200, immutable"
+        }
+      ]
+    }
   ]
 }
