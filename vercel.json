@@ -1,17 +1,21 @@
 {
   "rewrites": [
     {
-      "source": "/wp-content/uploads/(.*)",
-      "destination": "https://www.wgzdy.top/wp-content/uploads/$1"
+      "source": "/wp-content/uploads/:path*",
+      "destination": "https://www.wgzdy.top/wp-content/uploads/:path*"
     },
     {
-      "source": "/(.*\\.(webp|jpg|png|gif))",
-      "destination": "https://www.wgzdy.top/wp-content/uploads/$1"
+      "source": "/:file(\\d+_.+\\.webp)",  // 匹配 123_xxx.webp
+      "destination": "https://www.wgzdy.top/wp-content/uploads/:file"
+    },
+    {
+      "source": "/:file.:ext(webp|jpg|png|gif)",  // 匹配 xxx.webp, xxx.jpg 等
+      "destination": "https://www.wgzdy.top/wp-content/uploads/:file.:ext"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)\\.(css|js|webp|jpg|png|gif|svg|ttf|eot|woff|woff2)",
+      "source": "/:path*.(css|js|webp|jpg|png|gif|svg|ttf|eot|woff|woff2)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -20,4 +24,4 @@
       ]
     }
   ]
-} 
+}
