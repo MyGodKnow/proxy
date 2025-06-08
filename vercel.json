@@ -1,17 +1,17 @@
 {
   "rewrites": [
     { 
-      "source": "/:image(\d+_.+\\.webp)", 
-      "destination": "https://www.wgzdy.top/wp-content/uploads/:image" 
+      "source": "/(\\d+_.+\\.webp)", 
+      "destination": "https://www.wgzdy.top/wp-content/uploads/$1" 
     },
     { 
-      "source": "/wp-content/uploads/:url*", 
-      "destination": "https://www.wgzdy.top/wp-content/uploads/:url*" 
+      "source": "/wp-content/uploads/(.*)", 
+      "destination": "https://www.wgzdy.top/wp-content/uploads/$1" 
     }
   ],
   "headers": [
     {
-      "source": "/(.*).(css|js|webp|jpg|png|gif|svg|ttf|eot|woff|woff2)",
+      "source": "/(.*)\\.(css|js|webp|jpg|png|gif|svg|ttf|eot|woff|woff2)",
       "headers": [
         {
           "key": "Cache-Control",
