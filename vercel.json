@@ -1,12 +1,12 @@
 {
   "rewrites": [
-    { 
-      "source": "/(.*\\.webp)", 
-      "destination": "https://www.wgzdy.top/wp-content/uploads/$1" 
+    {
+      "source": "/wp-content/uploads/(.*)",
+      "destination": "https://www.wgzdy.top/wp-content/uploads/$1"
     },
-    { 
-      "source": "/wp-content/uploads/(.*)", 
-      "destination": "https://www.wgzdy.top/wp-content/uploads/$1" 
+    {
+      "source": "/(.*\\.(webp|jpg|png|gif))",
+      "destination": "https://www.wgzdy.top/wp-content/uploads/$1"
     }
   ],
   "headers": [
