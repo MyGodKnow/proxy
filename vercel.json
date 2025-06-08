@@ -5,11 +5,11 @@
       "destination": "https://www.wgzdy.top/wp-content/uploads/:path*"
     },
     {
-      "source": "/:file(\\d+_.+\\.webp)",  // 匹配 123_xxx.webp
+      "source": "/:file(\\d+_.+\\.webp)",
       "destination": "https://www.wgzdy.top/wp-content/uploads/:file"
     },
     {
-      "source": "/:file.:ext(webp|jpg|png|gif)",  // 匹配 xxx.webp, xxx.jpg 等
+      "source": "/:file.:ext(webp|jpg|png|gif)",
       "destination": "https://www.wgzdy.top/wp-content/uploads/:file.:ext"
     }
   ],
