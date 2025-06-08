@@ -1,6 +1,13 @@
 {
   "rewrites": [
-    { "source": "/:url*", "destination": "https://www.wgzdy.top/wp-content/uploads/:url*" }
+    { 
+      "source": "/:image(\d+_.+\\.webp)", 
+      "destination": "https://www.wgzdy.top/wp-content/uploads/:image" 
+    },
+    { 
+      "source": "/wp-content/uploads/:url*", 
+      "destination": "https://www.wgzdy.top/wp-content/uploads/:url*" 
+    }
   ],
   "headers": [
     {
