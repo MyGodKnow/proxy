@@ -1,12 +1,23 @@
 {
   "rewrites": [
     { 
-      "source": "/(.+\\.webp)", 
+      "source": "/(.*\\.webp)", 
       "destination": "https://www.wgzdy.top/wp-content/uploads/$1" 
     },
     { 
       "source": "/wp-content/uploads/(.*)", 
       "destination": "https://www.wgzdy.top/wp-content/uploads/$1" 
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(css|js|webp|jpg|png|gif|svg|ttf|eot|woff|woff2)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=259200, immutable"
+        }
+      ]
     }
   ]
 }
